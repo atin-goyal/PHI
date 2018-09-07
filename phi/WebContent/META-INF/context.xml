@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Context>
+
+<Resource 
+	name="jdbc/TestDB" 
+	auth="Container"
+	type="com.jolbox.bonecp.BoneCPDataSource" 
+	factory="org.apache.naming.factory.BeanFactory"
+	partitionCount="2"
+	maxConnectionsPerPartition="50"
+	minConnectionsPerPartition="1"
+	username="phi"
+	password="*"
+	driverClass="oracle.jdbc.driver.OracleDriver"
+	jdbcUrl="jdbc:oracle:thin:@//*:1521/orcl11g"/>
+   
+<Resource 
+	name="jdbc/ProdDB" 
+	auth="Container"
+	type="com.jolbox.bonecp.BoneCPDataSource" 
+	factory="org.apache.naming.factory.BeanFactory"
+	partitionCount="2"
+	maxConnectionsPerPartition="50"
+	minConnectionsPerPartition="1"
+	username="phi"
+	password="*"
+	driverClass="oracle.jdbc.driver.OracleDriver"
+	jdbcUrl="jdbc:oracle:thin:@//*:1521/orcl"/>  
+
+</Context>
